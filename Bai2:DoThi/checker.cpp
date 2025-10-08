@@ -13,6 +13,8 @@ int main(int argc, char* argv[]) {
     }
     long long correct = ans.readLong();
     long long contestant = ouf.readLong();
+    if (!ouf.seekEof())  // kiểm tra xem còn dữ liệu thừa không
+        quitf(_fail, "Extra data found in contestant output");
     if (contestant != correct){
         quitf(_wa, "Answer: expected %d, found %d", correct, contestant);
     }

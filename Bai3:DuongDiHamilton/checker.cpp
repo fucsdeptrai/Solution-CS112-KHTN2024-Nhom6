@@ -53,6 +53,8 @@ int main(int argc, char* argv[]) {
                 path.push_back(v);
                 deg[v]++;
             }
+            if (!ouf.seekEof()) quitf(_wa, "Extra data after %d numbers", n);
+
             if(!Check(path))
             {
                 quitf(_wa, "Path is not Hamiltonian");

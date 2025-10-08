@@ -9,6 +9,9 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    // cout << -1;
+    // return 0;
+
     cin >> n >> m;
 
     if(n == 1)
@@ -37,10 +40,9 @@ int main() {
             for(int i = 0; i < n; i++) {
                 cout << perm[i] << ' ';
             }
-            cout << '\n';
             return 0;
         }
     } while (next_permutation(perm.begin(), perm.end()));
-    cout << -1 << '\n';
+    cout << -1;
     return 0;
 }

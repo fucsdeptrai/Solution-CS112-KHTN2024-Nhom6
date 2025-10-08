@@ -95,8 +95,8 @@ gen_and_run() {
 # Subtask 1 (20 tests)
 echo "[Generate] Subtask 1"
 gen_and_run gen_sub1 1  1 20
-gen_and_run gen_sub1 2 21 44
-gen_and_run gen_sub1 3 45 68
+gen_and_run gen_sub1 2 21 34
+gen_and_run gen_sub1 3 35 68
 gen_and_run gen_sub1 4 69 100
 
 echo "✅ All test data generated successfully with base seed ${base_seed}!"

@@ -25,7 +25,11 @@ void genGraph(int n, int m, int lim_w_l, int lim_w_r, bool special = false) {
         int w = rnd.next(lim_w_l, lim_w_r);
         if(edges.size()<m) edges.push_back({{i, i+1}, w});
     }
-    for(int i = n;i <= m;i++) {
+    if(n+2<=m){
+        edges.push_back({{n, 1}, 1});
+        edges.push_back({{1, 2}, lim_w_r}); 
+    }
+    for(int i = n+2;i <= m;i++) {
         int u = rnd.next(1, n);
         int v = rnd.next(u, n);
         int w = rnd.next(lim_w_l, lim_w_r);
@@ -45,13 +49,13 @@ void genGraph(int n, int m, int lim_w_l, int lim_w_r, bool special = false) {
 }
 
 void genNormalCase() {
-    int n = rnd.next(10, MAXN);
-    genGraph(n, rnd.next(n, MAXM), 1, INF, false);
+    int n = rnd.next(100, MAXN);
+    genGraph(n, rnd.next(n+2, MAXM), 1, INF, false);
 }
 
 void genSpecialCase() {
-    int n = rnd.next(10, MAXN);
-    genGraph(n, rnd.next(n, MAXM), 1, INF, true);
+    int n = rnd.next(100, MAXN);
+    genGraph(n, rnd.next(n+2, MAXM), 1, INF, true);
 }
 
 void genEdgeCase() {

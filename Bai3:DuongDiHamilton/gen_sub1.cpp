@@ -69,7 +69,7 @@ void genSpecialCase() {
 
 void genEdgeCase() {
     int n = MAXN;
-    int m = rnd.next(n-1, n * 2);
+    int m = rnd.next(n+n/2, n + n*2);
     for (int i = 0; i < m; i++) {
         int u = rnd.next(1, n-1);
         int v = rnd.next(1, n-1);
@@ -92,7 +92,7 @@ void genEdgeCase() {
 
 void genStressCase() {
     int n = MAXN;
-    int m = rnd.next(n-1, n + n/2);
+    int m = rnd.next(n-1, n + n*2);
     for (int i = 0; i < m; i++) {
         int u = rnd.next(1, n);
         int v = rnd.next(1, n);

@@ -43,7 +43,7 @@ int main() {
     }
 
     if (end == -1) {
-        cout << -1 << "\n";
+        cout << -1;
         return 0;
     }
 
@@ -59,7 +59,6 @@ int main() {
 
     for (int x : path)
         cout << x + 1 << " ";
-    cout << "\n";
 
     return 0;
 }
